@@ -21,7 +21,7 @@ export default function BioPage() {
             </p>
             <p className="text-lg">
               Additional paragraphs and sections will be added here to provide a comprehensive
-              overview of the athlete's journey, milestones, and impact in the sport.
+              overview of the athlete&apos;s journey, milestones, and impact in the sport.
             </p>
             <p className="text-lg">
               More content sections can be added as needed to cover all aspects of the

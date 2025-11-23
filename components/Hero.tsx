@@ -1,11 +1,21 @@
+import Image from "next/image";
+
 export default function Hero() {
   return (
     <section className="relative w-full h-screen md:h-[90vh] flex items-center justify-center overflow-hidden">
-      {/* Background Image Placeholder */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
-        <div className="absolute inset-0 bg-black/40"></div>
-      </div>
       
+      {/* Background Image */}
+      <Image
+        src="/images/hero.jpg"
+        alt="Jaleel Kotun Hero Background"
+        fill
+        priority
+        className="object-cover object-center"
+      />
+
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-black/50"></div>
+
       {/* Content */}
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 tracking-tight">
@@ -32,5 +42,3 @@ export default function Hero() {
     </section>
   );
 }
-
-

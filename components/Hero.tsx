@@ -126,7 +126,7 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.4 }}
             >
               <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-display font-bold text-gold">
-                #26
+                #9
               </span>
             </motion.div>
 

@@ -8,12 +8,12 @@ export default function BioPage() {
     { label: "State", value: "Texas" },
     { label: "School", value: "Harmony School of Innovation (Katy)" },
     { label: "Club", value: "Global Football Innovation Academy (GFI)" },
-    { label: "League", value: "MLS NEXT" },
+    { label: "League", value: "MLS NEXT Homegrown" },
     { label: "Teams", value: "U15 and U16 (guest)" },
     { label: "Past Club", value: "Juventus Academy Houston" },
     { label: "Height", value: "5'8\"" },
     { label: "Positions", value: "Winger / Forward / Outside Back" },
-    { label: "Preferred Numbers", value: "#26 (wing), #9 (forward)" },
+    { label: "Preferred Numbers", value: "#9 (forward)" },
     { label: "Class", value: "2029" },
   ];
 

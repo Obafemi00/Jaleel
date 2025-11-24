@@ -100,7 +100,7 @@ export default function Hero() {
               <div className="absolute inset-0 bg-gradient-to-br from-gold/20 to-transparent rounded-lg blur-2xl"></div>
               <div className="relative w-full h-full rounded-lg overflow-hidden">
                 <Image
-                  src="/images/hero-potrait.jpg"
+                  src="/images/hero-potrait.JPG"
                   alt="Jaleel Kotun"
                   fill
                   priority

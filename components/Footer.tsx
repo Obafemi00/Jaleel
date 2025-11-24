@@ -25,6 +25,7 @@ export default function Footer() {
                   Stats
                 </Link>
               </li>
+              {/*
               <li>
                 <Link href="/highlights" className="hover:text-white transition-colors">
                   Highlights
@@ -35,9 +36,10 @@ export default function Footer() {
                   Gallery
                 </Link>
               </li>
+              */}
             </ul>
           </div>
-          
+          {/*
           <div>
             <h4 className="text-white text-sm font-semibold mb-4">Connect</h4>
             <ul className="space-y-2 text-sm">
@@ -53,6 +55,7 @@ export default function Footer() {
               </li>
             </ul>
           </div>
+          */}
         </div>
         
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm">

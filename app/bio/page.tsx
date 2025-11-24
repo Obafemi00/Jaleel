@@ -13,7 +13,7 @@ export default function BioPage() {
     { label: "Past Club", value: "Juventus Academy Houston" },
     { label: "Height", value: "5'8\"" },
     { label: "Positions", value: "Winger / Forward / Outside Back" },
-    { label: "Preferred Numbers", value: "#9 (forward)" },
+    { label: "Jersey Number", value: "#33 (forward)" },
     { label: "Class", value: "2029" },
   ];
 

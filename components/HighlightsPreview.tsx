@@ -2,12 +2,26 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import VideoCard from "./VideoCard";
 
 export default function HighlightsPreview() {
-  const highlights = [
-    { id: 1, title: "Championship Win", date: "2024" },
-    { id: 2, title: "Record Breaking Performance", date: "2023" },
-    { id: 3, title: "Award Recognition", date: "2023" },
+  // First 3 videos for homepage preview
+  const recentHighlights = [
+    {
+      videoId: "KeAlw6HSBdg",
+      title: "Elite Skills & Goals Compilation",
+      year: "2024"
+    },
+    {
+      videoId: "ou8eJxLBbeE",
+      title: "Match Highlights vs Top Opposition",
+      year: "2024"
+    },
+    {
+      videoId: "T1JkLhS-4Kc",
+      title: "Training & Development Session",
+      year: "2024"
+    }
   ];
 
   return (
@@ -31,28 +45,14 @@ export default function HighlightsPreview() {
           </Link>
         </motion.div>
         <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
-          {highlights.map((highlight, index) => (
-            <motion.div
-              key={highlight.id}
-              className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              whileHover={{ scale: 1.02 }}
-            >
-              <div className="aspect-video bg-gradient-to-br from-gray-200 to-gray-300 relative">
-                <div className="absolute inset-0 flex items-center justify-center text-gray-400">
-                  Video Placeholder
-                </div>
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-display font-semibold text-navy mb-2">
-                  {highlight.title}
-                </h3>
-                <p className="text-gray-600 font-sans">{highlight.date}</p>
-              </div>
-            </motion.div>
+          {recentHighlights.map((video, index) => (
+            <VideoCard
+              key={video.videoId}
+              videoId={video.videoId}
+              title={video.title}
+              year={video.year}
+              index={index}
+            />
           ))}
         </div>
         <div className="mt-8 text-center md:hidden">

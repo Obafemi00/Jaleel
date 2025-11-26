@@ -35,7 +35,7 @@ export default function AchievementsPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center text-gray-900 mb-16">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-center text-gray-900 mb-16">
           Achievements
         </h1>
         
@@ -47,13 +47,13 @@ export default function AchievementsPage() {
             >
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                 <div className="flex-1">
-                  <div className="text-sm font-semibold text-gray-500 mb-2">
+                  <div className="text-sm font-display font-semibold text-gray-500 mb-2">
                     {achievement.year}
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                  <h3 className="text-2xl font-display font-bold text-gray-900 mb-2">
                     {achievement.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-gray-600 leading-relaxed font-sans">
                     {achievement.description}
                   </p>
                 </div>

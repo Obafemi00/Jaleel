@@ -15,6 +15,7 @@ export default function BioPage() {
     { label: "Positions", value: "Winger / Forward / Outside Back" },
     { label: "Jersey Number", value: "#33 (forward)" },
     { label: "Class", value: "2029" },
+    { label: "CGPA", value: "4.0" },
   ];
 
   const strengths = [

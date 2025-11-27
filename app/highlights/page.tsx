@@ -8,32 +8,32 @@ export default function HighlightsPage() {
     {
       videoId: "KeAlw6HSBdg",
       title: "Elite Skills & Goals Compilation",
-      year: "2024"
+      year: "2025"
     },
     {
       videoId: "ou8eJxLBbeE",
       title: "Match Highlights vs Top Opposition",
-      year: "2024"
+      year: "2025"
     },
     {
       videoId: "T1JkLhS-4Kc",
       title: "Training & Development Session",
-      year: "2024"
+      year: "2025"
     },
     {
       videoId: "E8YFe8aKDmc",
       title: "Tournament Performance Showcase",
-      year: "2023"
+      year: "2025"
     },
     {
       videoId: "lI9tYUbV9mY",
       title: "Technical Skills Demonstration",
-      year: "2023"
+      year: "2025"
     },
     {
       videoId: "AlBiM_9hi6s",
       title: "Academy Match Highlights",
-      year: "2023"
+      year: "2025"
     }
   ];
 

@@ -13,6 +13,7 @@ export default function StatsSection() {
     { label: "Goals", value: "45" },
     { label: "Assists", value: "32" },
     { label: "Trophies", value: "8" },
+    { label: "GPA", value: "4.0" },
   ];
 
   return (
@@ -27,7 +28,7 @@ export default function StatsSection() {
         >
           Career Statistics
         </motion.h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-8">
           {stats.map((stat, index) => (
             <motion.div
               key={index}

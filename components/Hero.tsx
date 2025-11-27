@@ -155,7 +155,7 @@ export default function Hero() {
 
             {/* Position */}
             <motion.div
-              className="mb-6 md:mb-8"
+              className="mb-4 md:mb-6"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.7 }}
@@ -163,6 +163,20 @@ export default function Hero() {
               <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-sans font-medium text-white/90 tracking-wide uppercase">
                 Forward
               </p>
+            </motion.div>
+
+            {/* CGPA */}
+            <motion.div
+              className="mb-6 md:mb-8"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.75 }}
+            >
+              <div className="inline-block px-4 py-2 bg-gradient-to-r from-gold/20 to-gold/10 border border-gold/30 rounded-lg backdrop-blur-sm">
+                <span className="text-lg sm:text-xl md:text-2xl font-display font-bold text-gold tracking-wide">
+                  CGPA: 4.0
+                </span>
+              </div>
             </motion.div>
 
             {/* Buttons */}

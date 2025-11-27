@@ -35,13 +35,22 @@ export default function BioPreview() {
               Jaleel Kotun is a rising talent in the MLS NEXT system, competing for GFI Academy. Known for his pace, 1v1 ability, and natural finishing, he plays primarily as a winger or forward and often competes up an age group.
             </motion.p>
             <motion.p
-              className="text-base md:text-lg text-gray-700 mb-8 leading-relaxed font-sans"
+              className="text-base md:text-lg text-gray-700 mb-6 leading-relaxed font-sans"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
               His creativity, sharp footwork, and instinctive movement in the box make him one of the most exciting prospects in his class.
+            </motion.p>
+            <motion.p
+              className="text-base md:text-lg text-gray-700 mb-8 leading-relaxed font-sans"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.35 }}
+            >
+              Off the field, he takes AP/Honors Math, Science, and Reading while maintaining a 4.0 GPA, striving for excellence as a student-athlete on and off the pitch.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}

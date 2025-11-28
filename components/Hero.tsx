@@ -174,7 +174,7 @@ export default function Hero() {
             >
               <div className="inline-block px-4 py-2 bg-gradient-to-r from-gold/20 to-gold/10 border border-gold/30 rounded-lg backdrop-blur-sm">
                 <span className="text-lg sm:text-xl md:text-2xl font-display font-bold text-gold tracking-wide">
-                  CGPA: 4.0
+                  GPA: 4.0
                 </span>
               </div>
             </motion.div>

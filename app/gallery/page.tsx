@@ -24,39 +24,51 @@ export default function GalleryPage() {
       id: "juventus",
       label: "Juventus",
       images: [
-        { id: "j1", src: "/images/1.jpg", alt: "Juventus Academy Training" },
-        { id: "j2", src: "/images/2.jpg", alt: "Juventus Match Action" },
-        { id: "j3", src: "/images/3.JPG", alt: "Juventus Team Photo" },
-        { id: "j4", src: "/images/4.jpg", alt: "Juventus Skills Training" },
+        { id: "j1", src: "/images/2.jpg", alt: "Juventus Academy" },
       ]
     },
     {
       id: "odp",
       label: "ODP",
       images: [
-        { id: "o1", src: "/images/5.JPG", alt: "ODP Training Session" },
-        { id: "o2", src: "/images/6.jpg", alt: "ODP Match Highlights" },
-        { id: "o3", src: "/images/AboutMe.JPG", alt: "ODP Team Selection" },
-        { id: "o4", src: "/images/team-photo.jpg", alt: "ODP Group Photo" },
+        { id: "o1", src: "/images/1.jpg", alt: "ODP Training Session" },
+        { id: "o2", src: "/images/team-photo.jpg", alt: "ODP Team Photo" },
       ]
     },
     {
       id: "gfi",
       label: "GFI",
       images: [
-        { id: "g1", src: "/images/1.jpg", alt: "GFI Academy Training" },
-        { id: "g2", src: "/images/2.jpg", alt: "GFI Match Performance" },
-        { id: "g3", src: "/images/3.JPG", alt: "GFI Team Building" },
+        { id: "g1", src: "/images/3.JPG", alt: "GFI Academy Training" },
+        { id: "g2", src: "/images/4.jpg", alt: "GFI Match Performance" },
+        { id: "g3", src: "/images/5.JPG", alt: "GFI Team Building" },
+        { id: "g4", src: "/images/7.JPG", alt: "GFI Skills Development" },
+        { id: "g5", src: "/images/8.JPG", alt: "GFI Competition" },
+        { id: "g6", src: "/images/9.JPG", alt: "GFI Training Session" },
+        { id: "g7", src: "/images/10.JPG", alt: "GFI Match Action" },
+        { id: "g8", src: "/images/11.JPG", alt: "GFI Team Practice" },
+        { id: "g9", src: "/images/12.JPG", alt: "GFI Academy" },
+        { id: "g10", src: "/images/13.JPG", alt: "GFI Development" },
+        { id: "g11", src: "/images/14.JPG", alt: "GFI Training" },
+        { id: "g12", src: "/images/15.JPG", alt: "GFI Match" },
+        { id: "g13", src: "/images/16.JPG", alt: "GFI Skills" },
+        { id: "g14", src: "/images/17.JPG", alt: "GFI Performance" },
+        { id: "g15", src: "/images/18.JPG", alt: "GFI Academy Training" },
+        { id: "g16", src: "/images/19.JPG", alt: "GFI Team" },
+        { id: "g17", src: "/images/20.JPG", alt: "GFI Competition" },
+        { id: "g18", src: "/images/21.JPG", alt: "GFI Development" },
+        { id: "g19", src: "/images/22.JPG", alt: "GFI Training Session" },
+        { id: "g20", src: "/images/23.JPG", alt: "GFI Match Action" },
+        { id: "g21", src: "/images/24.JPG", alt: "GFI Academy" }
       ]
     },
     {
       id: "other",
       label: "Other",
       images: [
-        { id: "ot1", src: "/images/4.jpg", alt: "Personal Training" },
-        { id: "ot2", src: "/images/5.JPG", alt: "Awards Ceremony" },
-        { id: "ot3", src: "/images/6.jpg", alt: "Community Event" },
-        { id: "ot4", src: "/images/hero-potrait.JPG", alt: "Professional Portrait" },
+        { id: "ot1", src: "/images/6.jpg", alt: "Personal Training" },
+        { id: "ot2", src: "/images/25.jpg", alt: "Academic Excellence" },
+        { id: "ot3", src: "/images/Jaleel Banner small.jpg", alt: "Jaleel Kotun Banner" },
       ]
     }
   ];
@@ -87,7 +99,7 @@ export default function GalleryPage() {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <div className="relative bg-gray-50 rounded-full p-1 shadow-inner">
-            <div className="flex space-x-1">
+            <div className="flex flex-wrap justify-center gap-1">
               {galleryTabs.map((tab) => (
                 <button
                   key={tab.id}
@@ -139,15 +151,12 @@ export default function GalleryPage() {
                 <div className="relative w-full h-full">
                   <Image
                     src={image.src}
-                    alt={image.alt}
+                    alt=""
                     fill
                     className="object-cover transition-transform duration-300 group-hover:scale-110"
                     sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <div className="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                    <p className="text-sm font-sans font-medium">{image.alt}</p>
-                  </div>
                 </div>
               </motion.div>
             ))}
@@ -162,7 +171,7 @@ export default function GalleryPage() {
           transition={{ duration: 0.6, delay: 0.8 }}
         >
           <p className="text-gray-600 font-sans">
-            Showing {activeTabData.images.length} photos from {activeTabData.label}
+            Showing {activeTabData.images.length} {activeTabData.images.length === 1 ? "photo" : "photos"} from {activeTabData.label}
           </p>
         </motion.div>
       </div>

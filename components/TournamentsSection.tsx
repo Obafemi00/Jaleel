@@ -29,7 +29,7 @@ export default function TournamentsSection() {
       name: "MLS Next Fest Tournament",
       startDate: "December 15th, 2025",
       location: "Arizona",
-      link:"https://www.mlssoccer.com/mlsnext/tournaments/fest/",
+      link: "https://www.mlssoccer.com/mlsnext/tournaments/fest/",
       type: "mls",
       description: "Premier showcase tournament for top prospects"
     }

@@ -199,7 +199,7 @@ export default function ContactPage() {
                 onChange={handleChange}
                 required
                 disabled={status.type === 'loading'}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-navy focus:border-transparent font-sans disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-navy focus:border-transparent font-sans text-black disabled:opacity-50 disabled:cursor-not-allowed"
                 placeholder="Your name"
               />
             </div>
@@ -219,7 +219,7 @@ export default function ContactPage() {
                 onChange={handleChange}
                 required
                 disabled={status.type === 'loading'}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-navy focus:border-transparent font-sans disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-navy focus:border-transparent font-sans text-black disabled:opacity-50 disabled:cursor-not-allowed"
                 placeholder="your.email@example.com"
               />
             </div>
@@ -239,7 +239,7 @@ export default function ContactPage() {
                 required
                 rows={6}
                 disabled={status.type === 'loading'}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-navy focus:border-transparent resize-none font-sans disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-navy focus:border-transparent resize-none font-sans text-black disabled:opacity-50 disabled:cursor-not-allowed"
                 placeholder="Your message"
               />
             </div>

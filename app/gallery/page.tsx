@@ -68,7 +68,7 @@ export default function GalleryPage() {
       images: [
         { id: "ot1", src: "/images/6.jpg", alt: "Personal Training" },
         { id: "ot2", src: "/images/25.jpg", alt: "Academic Excellence" },
-        { id: "ot3", src: "/images/Jaleel Banner small.jpg", alt: "Jaleel Kotun Banner" },
+        { id: "ot3", src: "/images/Jaleel Banner.jpg", alt: "Jaleel Kotun Banner" },
       ]
     }
   ];
@@ -133,7 +133,7 @@ export default function GalleryPage() {
         <AnimatePresence mode="wait">
           <motion.div
             key={activeTab}
-            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6"
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.95 }}
@@ -142,21 +142,22 @@ export default function GalleryPage() {
             {activeTabData.images.map((image, index) => (
               <motion.div
                 key={image.id}
-                className="aspect-square bg-gradient-to-br from-navy/5 to-gold/5 rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer group"
+                className="w-full cursor-pointer group"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
-                whileHover={{ scale: 1.02, y: -5 }}
+                whileHover={{ scale: 1.02 }}
               >
-                <div className="relative w-full h-full">
+                <div className="relative w-full" style={{ height: 'auto' }}>
                   <Image
                     src={image.src}
                     alt=""
-                    fill
-                    className="object-cover transition-transform duration-300 group-hover:scale-110"
-                    sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                    width={1200}
+                    height={900}
+                    className="w-full h-auto transition-transform duration-300 group-hover:scale-105"
+                    style={{ width: '100%', height: 'auto' }}
+                    sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 50vw, 33vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-navy/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
               </motion.div>
             ))}

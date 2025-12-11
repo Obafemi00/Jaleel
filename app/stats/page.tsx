@@ -32,11 +32,13 @@ export default function StatsPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-center text-gray-900 mb-16">
-          Statistics
-        </h1>
+        <header className="mb-16">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-center text-gray-900">
+            Statistics
+          </h1>
+        </header>
         
-        <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
+        <section className="grid md:grid-cols-3 gap-8 lg:gap-12" aria-label="Statistics categories">
           {statsCategories.map((category, categoryIndex) => (
             <div key={categoryIndex} className="bg-white rounded-lg shadow-sm p-8">
               <h2 className="text-2xl font-display font-bold text-gray-900 mb-6">
@@ -55,7 +57,7 @@ export default function StatsPage() {
               </div>
             </div>
           ))}
-        </div>
+        </section>
       </div>
     </div>
   );

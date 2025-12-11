@@ -77,12 +77,13 @@ export default function BioPreview() {
           >
             <div className="aspect-square bg-gradient-to-br from-navy/10 to-gold/10 rounded-lg overflow-hidden border border-gold/20">
             <Image
-  src="/images/AboutMe.JPG"
-  alt="Jaleel Kotun"
-  width={600}
-  height={600}
-  className="object-cover w-full h-full"
-/>
+              src="/images/AboutMe.JPG"
+              alt="Jaleel Kotun - Elite forward and winger competing in MLS NEXT with GFI Academy"
+              width={600}
+              height={600}
+              className="object-cover w-full h-full"
+              loading="lazy"
+            />
 
             </div>
           </motion.div>

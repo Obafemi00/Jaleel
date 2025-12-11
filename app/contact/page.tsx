@@ -92,7 +92,7 @@ export default function ContactPage() {
         <div className="relative w-full h-full overflow-hidden">
           <Image
             src="/images/Jaleel Banner small.jpg"
-            alt="Jaleel Kotun Banner"
+            alt="Jaleel Kotun banner - Elite MLS NEXT academy forward and winger"
             fill
             priority
             className="object-cover object-center"
@@ -104,16 +104,18 @@ export default function ContactPage() {
       </motion.div>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-        <motion.h1
-          className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-center text-gray-900 mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
-          Contact
-        </motion.h1>
+        <header className="mb-16">
+          <motion.h1
+            className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-center text-gray-900"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            Contact
+          </motion.h1>
+        </header>
         
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 gap-12" aria-label="Contact information and form">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}

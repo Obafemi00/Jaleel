@@ -101,7 +101,7 @@ export default function Hero() {
               <div className="relative w-full h-full rounded-lg overflow-hidden">
                 <Image
                   src="/images/hero-potrait.JPG"
-                  alt="Jaleel Kotun"
+                  alt="Jaleel Kotun - Elite forward wearing jersey number 33 for GFI Academy in MLS NEXT"
                   fill
                   priority
                   className="object-cover object-center"

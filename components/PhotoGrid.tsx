@@ -39,10 +39,11 @@ export default function PhotoGrid() {
             >
               <Image
                 src={src}
-                alt={`Gallery photo ${index + 1}`}
+                alt={`Jaleel Kotun training and match action photography - Gallery image ${index + 1}`}
                 width={600}
                 height={800}
                 className="w-full h-full object-cover"
+                loading="lazy"
               />
             </motion.div>
           ))}

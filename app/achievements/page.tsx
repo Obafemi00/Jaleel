@@ -99,24 +99,26 @@ export default function AchievementsPage() {
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
         {/* Header */}
-        <motion.div
-          className="mb-12 md:mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-        >
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-center text-navy mb-4">
-            Achievements
-          </h1>
-          <div className="h-1 w-24 bg-gold mx-auto"></div>
-        </motion.div>
+        <header className="mb-12 md:mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-center text-navy mb-4">
+              Achievements
+            </h1>
+            <div className="h-1 w-24 bg-gold mx-auto"></div>
+          </motion.div>
+        </header>
 
         {/* Two Column Layout */}
-        <motion.div
+        <motion.section
+          className="grid md:grid-cols-2 gap-8 lg:gap-12"
+          aria-label="Academic and soccer achievements"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="grid md:grid-cols-2 gap-8 lg:gap-12"
         >
           {/* Left Column - Academic Achievements */}
           <motion.section variants={itemVariants}>
@@ -135,10 +137,11 @@ export default function AchievementsPage() {
                     <div className="relative w-full aspect-[4/3] bg-gray-100">
                       <Image
                         src={achievement.image}
-                        alt={achievement.title}
+                        alt={`${achievement.title} - ${achievement.description || 'Academic achievement certificate'}`}
                         fill
                         className="object-cover"
                         sizes="(max-width: 768px) 100vw, 50vw"
+                        loading="lazy"
                       />
                     </div>
                   ) : (
@@ -217,7 +220,7 @@ export default function AchievementsPage() {
               ))}
             </div>
           </motion.section>
-        </motion.div>
+        </motion.section>
       </div>
     </div>
   );

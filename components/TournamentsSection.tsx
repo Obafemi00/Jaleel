@@ -84,7 +84,7 @@ export default function TournamentsSection() {
           <div className="h-1 w-24 bg-gold mx-auto"></div>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
+        <div className="grid md:grid-cols-2 gap-6 lg:gap-8 mb-8">
           {tournaments.map((tournament, index) => (
             <motion.div
               key={tournament.id}
@@ -147,6 +147,25 @@ export default function TournamentsSection() {
             </motion.div>
           ))}
         </div>
+
+        {/* CTA to View All Tournaments */}
+        <motion.div
+          className="text-center mt-12"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
+          <motion.a
+            href="/tournaments"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-navy text-white font-display font-semibold rounded-lg hover:bg-navy-light transition-colors"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <span>View Tournaments</span>
+            <ExternalLink className="w-4 h-4" />
+          </motion.a>
+        </motion.div>
       </div>
     </section>
   );

@@ -34,8 +34,8 @@ export default function StatsPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
         <header className="mb-16">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-center text-gray-900">
-            Statistics
-          </h1>
+          Statistics
+        </h1>
         </header>
         
         <section className="grid md:grid-cols-3 gap-8 lg:gap-12" aria-label="Statistics categories">

@@ -70,16 +70,16 @@ export default function BioPage() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
         {/* Header */}
         <header className="mb-12 md:mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-          >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-bold text-navy mb-4">
-              Biography
-            </h1>
-            <div className="h-1 w-24 bg-gold"></div>
-          </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-bold text-navy mb-4">
+            Biography
+          </h1>
+          <div className="h-1 w-24 bg-gold"></div>
+        </motion.div>
         </header>
 
         <motion.div

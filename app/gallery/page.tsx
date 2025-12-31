@@ -92,7 +92,10 @@ export default function GalleryPage() {
         { id: "g35", src: "/images/A7408368.JPG", alt: "", type: "image" },
         { id: "g36", src: "/images/A7408419.JPG", alt: "", type: "image" },
         { id: "g37", src: "/images/IMG_3853.jpg", alt: "", type: "image" },
-        { id: "g38", src: "/images/IMG_5549.mov", alt: "", type: "video" }
+        { id: "g38", src: "/images/IMG_5549.mov", alt: "", type: "video" },
+        { id: "g39", src: "/images/Jaleel-arizona1.jpg", alt: "", type: "image" },
+        { id: "g40", src: "/images/jaleel-arizona2.jpg", alt: "", type: "image" },
+        { id: "g41", src: "/images/jaleelarizona3.jpg", alt: "", type: "image" }
       ]
     },
     {
@@ -113,16 +116,16 @@ export default function GalleryPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
         {/* Header */}
         <header className="mb-12 md:mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-          >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-center text-navy mb-4">
-              Gallery
-            </h1>
-            <div className="h-1 w-24 bg-gold mx-auto"></div>
-          </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-center text-navy mb-4">
+            Gallery
+          </h1>
+          <div className="h-1 w-24 bg-gold mx-auto"></div>
+        </motion.div>
         </header>
 
         {/* Tab Navigation */}
@@ -199,16 +202,16 @@ export default function GalleryPage() {
                       Your browser does not support the video tag.
                     </video>
                   ) : (
-                    <Image
+                  <Image
                       src={media.src}
-                      alt=""
-                      width={1200}
-                      height={900}
+                    alt=""
+                    width={1200}
+                    height={900}
                       className="w-full h-auto transition-transform duration-300 group-hover:scale-105 rounded-lg"
-                      style={{ width: '100%', height: 'auto' }}
-                      sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 50vw, 33vw"
+                    style={{ width: '100%', height: 'auto' }}
+                    sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 50vw, 33vw"
                       loading="lazy"
-                    />
+                  />
                   )}
                 </div>
               </motion.div>

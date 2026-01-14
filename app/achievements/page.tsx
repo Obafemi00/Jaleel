@@ -37,6 +37,12 @@ export default function AchievementsPage() {
       title: "Academic Certificates",
       image: "/images/25.jpg",
       description: "Multiple academic achievement certificates"
+    },
+    {
+      id: "awards-recognition",
+      title: "Awards Recognition",
+      image: "/images/awards2.JPG",
+      description: "Academic awards and recognition"
     }
   ];
 

@@ -6,7 +6,6 @@
    ```bash
    cp .env.example .env.local
    ```
-
 2. Configure your SMTP settings in `.env.local`:
 
 ### Option A: Gmail (Recommended)
@@ -14,7 +13,6 @@
 SMTP_USER=your-email@gmail.com
 SMTP_PASS=your-16-character-app-password
 ```
-
 **Gmail App Password Setup:**
 1. Enable 2-Factor Authentication on your Google account
 2. Go to [Google Account Settings](https://myaccount.google.com/) > Security > App passwords
@@ -87,11 +85,8 @@ SMTP_PASS=your-password
    ```bash
    npm run dev
    ```
-
 4. Navigate to `/contact` and test the form
-
 ## Security Features
-
 - **Rate Limiting**: Prevents spam (5 requests per 15 minutes)
 - **Honeypot Field**: Catches automated bots
 - **Input Sanitization**: Prevents XSS attacks

@@ -51,6 +51,14 @@ export default function GalleryPage() {
         { id: "o2", src: "/images/team-photo.jpg", alt: "", type: "image" },
         { id: "o3", src: "/images/DSC01577.jpeg", alt: "", type: "image" },
         { id: "o4", src: "/images/DSC01574.jpeg", alt: "", type: "image" },
+        { id: "o5", src: "/images/IMG_2361.JPG", alt: "", type: "image" },
+        { id: "o6", src: "/images/IMG_2034.JPG", alt: "", type: "image" },
+        { id: "o7", src: "/images/IMG_2711.JPG", alt: "", type: "image" },
+        { id: "o8", src: "/images/IMG_2708.JPG", alt: "", type: "image" },
+        { id: "o9", src: "/images/IMG_2696.JPG", alt: "", type: "image" },
+        { id: "o10", src: "/images/IMG_2715.JPG", alt: "", type: "image" },
+        { id: "o11", src: "/images/IMG_2872.JPG", alt: "", type: "image" },
+        { id: "o12", src: "/images/IMG_2878.JPG", alt: "", type: "image" },
       ]
     },
     {

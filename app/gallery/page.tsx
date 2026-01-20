@@ -49,6 +49,8 @@ export default function GalleryPage() {
       images: [
         { id: "o1", src: "/images/1.jpg", alt: "", type: "image" },
         { id: "o2", src: "/images/team-photo.jpg", alt: "", type: "image" },
+        { id: "o3", src: "/images/DSC01577.jpeg", alt: "", type: "image" },
+        { id: "o4", src: "/images/DSC01574.jpeg", alt: "", type: "image" },
       ]
     },
     {

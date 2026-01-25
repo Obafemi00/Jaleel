@@ -4,11 +4,13 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
+type GalleryMediaType = "image" | "video";
+
 interface GalleryMedia {
   id: string;
   src: string;
   alt: string;
-  type: 'image' | 'video';
+  type: GalleryMediaType;
 }
 
 interface GalleryTab {
@@ -19,6 +21,7 @@ interface GalleryTab {
 
 export default function GalleryPage() {
   const [activeTab, setActiveTab] = useState("juventus");
+  const [activeOdpSubTab, setActiveOdpSubTab] = useState("2024-2025");
 
   const galleryTabs: GalleryTab[] = [
     {
@@ -46,20 +49,7 @@ export default function GalleryPage() {
     {
       id: "odp",
       label: "ODP",
-      images: [
-        { id: "o1", src: "/images/1.jpg", alt: "", type: "image" },
-        { id: "o2", src: "/images/team-photo.jpg", alt: "", type: "image" },
-        { id: "o3", src: "/images/DSC01577.jpeg", alt: "", type: "image" },
-        { id: "o4", src: "/images/DSC01574.jpeg", alt: "", type: "image" },
-        { id: "o5", src: "/images/IMG_2361.JPG", alt: "", type: "image" },
-        { id: "o6", src: "/images/IMG_2034.JPG", alt: "", type: "image" },
-        { id: "o7", src: "/images/IMG_2711.JPG", alt: "", type: "image" },
-        { id: "o8", src: "/images/IMG_2708.JPG", alt: "", type: "image" },
-        { id: "o9", src: "/images/IMG_2696.JPG", alt: "", type: "image" },
-        { id: "o10", src: "/images/IMG_2715.JPG", alt: "", type: "image" },
-        { id: "o11", src: "/images/IMG_2872.JPG", alt: "", type: "image" },
-        { id: "o12", src: "/images/IMG_2878.JPG", alt: "", type: "image" },
-      ]
+      images: [] // ODP now uses sub-tabs, so this is empty
     },
     {
       id: "gfi",
@@ -119,7 +109,53 @@ export default function GalleryPage() {
     }
   ];
 
+  // ODP sub-tabs data
+  const odpSubTabs: Record<string, { label: string; images: GalleryMedia[] }> = {
+    "2024-2025": {
+      label: "2024-2025 Interregional",
+      images: [
+        { id: "odp24-1", src: "/images/24-25 Odp/1.jpg", alt: "", type: "image" },
+        { id: "odp24-2", src: "/images/24-25 Odp/1769358856555blob.jpg", alt: "", type: "image" },
+        { id: "odp24-3", src: "/images/24-25 Odp/1769358873719blob.jpg", alt: "", type: "image" },
+        { id: "odp24-4", src: "/images/24-25 Odp/1769359001931blob.jpg", alt: "", type: "image" },
+        { id: "odp24-5", src: "/images/24-25 Odp/1769369366349blob.jpg", alt: "", type: "image" },
+        { id: "odp24-6", src: "/images/24-25 Odp/1769369450525blob.jpg", alt: "", type: "image" },
+        { id: "odp24-7", src: "/images/24-25 Odp/1769369506111blob.jpg", alt: "", type: "image" },
+        { id: "odp24-8", src: "/images/24-25 Odp/ODP 3.jpg", alt: "", type: "image" },
+        { id: "odp24-9", src: "/images/24-25 Odp/ODP 6.jpg", alt: "", type: "image" },
+        { id: "odp24-10", src: "/images/24-25 Odp/team-photo.jpg", alt: "", type: "image" },
+      ] satisfies GalleryMedia[]
+    },
+    "2025-2026": {
+      label: "2025-2026 Interregional",
+      images: [
+        { id: "odp25-1", src: "/images/25-26 odp/1769359378701blob.jpg", alt: "", type: "image" },
+        { id: "odp25-2", src: "/images/25-26 odp/DSC01574.jpeg", alt: "", type: "image" },
+        { id: "odp25-3", src: "/images/25-26 odp/DSC01577.jpeg", alt: "", type: "image" },
+        { id: "odp25-4", src: "/images/25-26 odp/IMG_2034.JPG", alt: "", type: "image" },
+        { id: "odp25-5", src: "/images/25-26 odp/IMG_2361.JPG", alt: "", type: "image" },
+        { id: "odp25-6", src: "/images/25-26 odp/IMG_2696.JPG", alt: "", type: "image" },
+        { id: "odp25-7", src: "/images/25-26 odp/IMG_2708.JPG", alt: "", type: "image" },
+        { id: "odp25-8", src: "/images/25-26 odp/IMG_2711.JPG", alt: "", type: "image" },
+        { id: "odp25-9", src: "/images/25-26 odp/IMG_2715.JPG", alt: "", type: "image" },
+        { id: "odp25-10", src: "/images/25-26 odp/IMG_2872.JPG", alt: "", type: "image" },
+        { id: "odp25-11", src: "/images/25-26 odp/IMG_2878.JPG", alt: "", type: "image" },
+        { id: "odp25-12", src: "/images/25-26 odp/PHOTO-2026-01-25-11-16-17.jpg", alt: "", type: "image" },
+      ] satisfies GalleryMedia[]
+    }
+  };
+
   const activeTabData = galleryTabs.find(tab => tab.id === activeTab) || galleryTabs[0];
+  
+  // Get the active images based on tab and sub-tab
+  const getActiveImages = (): GalleryMedia[] => {
+    if (activeTab === "odp") {
+      return odpSubTabs[activeOdpSubTab as keyof typeof odpSubTabs]?.images || [];
+    }
+    return activeTabData.images;
+  };
+
+  const activeImages = getActiveImages();
 
   return (
     <div className="min-h-screen bg-white">
@@ -150,7 +186,12 @@ export default function GalleryPage() {
               {galleryTabs.map((tab) => (
                 <button
                   key={tab.id}
-                  onClick={() => setActiveTab(tab.id)}
+                  onClick={() => {
+                    setActiveTab(tab.id);
+                    if (tab.id !== "odp") {
+                      setActiveOdpSubTab("2024-2025");
+                    }
+                  }}
                   className={`relative px-6 py-3 text-sm md:text-base font-display font-semibold rounded-full transition-all duration-300 ${
                     activeTab === tab.id
                       ? "text-white"
@@ -176,18 +217,59 @@ export default function GalleryPage() {
           </div>
         </motion.div>
 
+        {/* ODP Sub-Tab Navigation */}
+        {activeTab === "odp" && (
+          <motion.div
+            className="flex justify-center mb-8"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.4 }}
+          >
+            <div className="relative bg-gray-100 rounded-lg p-1 shadow-sm">
+              <div className="flex flex-wrap justify-center gap-1">
+                {Object.entries(odpSubTabs).map(([key, subTab]) => (
+                  <button
+                    key={key}
+                    onClick={() => setActiveOdpSubTab(key)}
+                    className={`relative px-5 py-2 text-sm font-display font-medium rounded-md transition-all duration-300 ${
+                      activeOdpSubTab === key
+                        ? "text-white"
+                        : "text-gray-600 hover:text-navy"
+                    }`}
+                  >
+                    {activeOdpSubTab === key && (
+                      <motion.div
+                        layoutId="activeOdpSubTab"
+                        className="absolute inset-0 bg-navy rounded-md shadow-md"
+                        initial={false}
+                        transition={{
+                          type: "spring",
+                          stiffness: 500,
+                          damping: 30
+                        }}
+                      />
+                    )}
+                    <span className="relative z-10">{subTab.label}</span>
+                  </button>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        )}
+
         {/* Gallery Grid */}
         <AnimatePresence mode="wait">
           <motion.section
-            key={activeTab}
+            key={activeTab === "odp" ? `odp-${activeOdpSubTab}` : activeTab}
             className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
-            aria-label={`${activeTabData.label} gallery images`}
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.95 }}
+            aria-label={activeTab === "odp" ? `${odpSubTabs[activeOdpSubTab as keyof typeof odpSubTabs]?.label} gallery images` : `${activeTabData.label} gallery images`}
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: 20 }}
             transition={{ duration: 0.4, ease: "easeOut" }}
           >
-            {activeTabData.images.map((media, index) => (
+            {activeImages.map((media, index) => (
               <motion.div
                 key={media.id}
                 className="w-full cursor-pointer group"
@@ -237,7 +319,7 @@ export default function GalleryPage() {
           transition={{ duration: 0.6, delay: 0.8 }}
         >
           <p className="text-gray-600 font-sans">
-            Showing {activeTabData.images.length} {activeTabData.images.length === 1 ? "item" : "items"} from {activeTabData.label}
+            Showing {activeImages.length} {activeImages.length === 1 ? "item" : "items"} from {activeTab === "odp" ? odpSubTabs[activeOdpSubTab as keyof typeof odpSubTabs]?.label : activeTabData.label}
           </p>
         </motion.div>
       </div>

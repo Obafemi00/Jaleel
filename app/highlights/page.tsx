@@ -34,6 +34,21 @@ export default function HighlightsPage() {
       videoId: "AlBiM_9hi6s",
       title: "Academy Match Highlights",
       year: "2025"
+    },
+    {
+      videoId: "lS44BNHFIPA",
+      title: "Goal 1 — Jaleel Kotun (MLS NEXT)",
+      year: "2025"
+    },
+    {
+      videoId: "JijUbwzFTow",
+      title: "Goal 2 — Jaleel Kotun (MLS NEXT)",
+      year: "2025"
+    },
+    {
+      videoId: "JhPnt_TW1aE",
+      title: "Goal 3 — Jaleel Kotun (MLS NEXT)",
+      year: "2025"
     }
   ];
 

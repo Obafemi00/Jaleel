@@ -74,6 +74,8 @@ const cleanTeamName = (team: string): string => {
 
 // Match data from TAKA.io (Sept-Dec 2025) - U15 matches only
 const rawMatches = [
+  { date: "19 Jan 26", category: "U15 Boys", homeTeam: "GFI Academy 2011 South MLS NEXT U15", score: "1-1", awayTeam: "2011 East MLS NEXT U15" },
+  { date: "17 Jan 26", category: "U15 Boys", homeTeam: "GFI Academy 2011 South MLS NEXT U15", score: "1-0", awayTeam: "2011 West MLS NEXT U15" },
   { date: "25 Dec 25", category: "U15 Boys", homeTeam: "ALBION SC Los Angeles MLS NEXT U15", score: "3-2", awayTeam: "Global Football Innovation Academy MLS NEXT U15" },
   { date: "25 Dec 25", category: "U15 Boys", homeTeam: "Global Football Innovation Academy MLS NEXT U15 AD", score: "7-0", awayTeam: "Lou Fuzz Athletic 2 MLS NEXT U15 AD" },
   { date: "24 Dec 25", category: "U15 Boys", homeTeam: "FC Golden State Force MLS NEXT U15", score: "3-2", awayTeam: "Global Football Innovation Academy MLS NEXT U15" },
@@ -149,10 +151,37 @@ export default function TournamentsPage() {
 
   // Group matches by season
   const groupedMatches = useMemo(() => {
-    const season: Record<string, Match[]> = {
-      "Fall 2025 (Sept – Dec)": filteredMatches,
-    };
-    return season;
+    const fall2025: Match[] = [];
+    const spring2026: Match[] = [];
+    
+    filteredMatches.forEach((match) => {
+      const matchDate = new Date(match.date);
+      const year = matchDate.getFullYear();
+      const month = matchDate.getMonth() + 1; // 1-12
+      
+      if (year === 2025 || (year === 2026 && month <= 1)) {
+        // Fall 2025 (Sept-Dec) and January 2026
+        if (year === 2025 && month >= 9) {
+          fall2025.push(match);
+        } else if (year === 2026 && month === 1) {
+          spring2026.push(match);
+        } else {
+          fall2025.push(match);
+        }
+      } else {
+        spring2026.push(match);
+      }
+    });
+    
+    const seasons: Record<string, Match[]> = {};
+    if (fall2025.length > 0) {
+      seasons["Fall 2025 (Sept – Dec)"] = fall2025;
+    }
+    if (spring2026.length > 0) {
+      seasons["Spring 2026 (Jan –)"] = spring2026;
+    }
+    
+    return seasons;
   }, [filteredMatches]);
 
   const formatDate = (dateString: string) => {

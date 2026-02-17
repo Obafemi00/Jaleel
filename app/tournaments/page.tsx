@@ -104,6 +104,9 @@ const rawMatches = [
   { date: "23 Sep 25", category: "U15 Boys", homeTeam: "Capital City Soccer Club MLS NEXT U15", score: "3-4", awayTeam: "Global Football Innovation Academy MLS NEXT U15" },
 ];
 
+// TODO: Client provided U16 result for 2026-02-08; confirm participation before publishing.
+// Match details: 08 Feb 26, MLS NEXT U16, Home: Global Football Innovation Academy (GFI Academy) vs Away: Tulsa Greenwood SC (MLS NEXT U16), Result: 2-1 (GFI Academy win), Status: Completed
+
 const matches: Match[] = rawMatches.map((match, index) => {
   const { result, isHome } = determineResult(match.homeTeam, match.awayTeam, match.score, isGFIAcademy);
   const ageGroup = match.category.includes("U15") ? "U15" : "U16";

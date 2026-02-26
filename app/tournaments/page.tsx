@@ -103,6 +103,8 @@ const rawMatches = [
   { date: "03 Sep 25", category: "U15 Boys", homeTeam: "Global Football Innovation Academy MLS NEXT U15", score: "2-5", awayTeam: "Dallas Hornets MLS NEXT U15" },
   { date: "23 Sep 25", category: "U15 Boys", homeTeam: "Capital City Soccer Club MLS NEXT U15", score: "3-4", awayTeam: "Global Football Innovation Academy MLS NEXT U15" },
   { date: "08 Feb 26", category: "U15 Boys", homeTeam: "Global Football Innovation Academy MLS NEXT U15", score: "5-0", awayTeam: "Tulsa Greenwood SC MLS NEXT U15" },
+  { date: "21 Feb 26", category: "U15 Boys", homeTeam: "Global Football Innovation Academy MLS NEXT U15", score: "14-0", awayTeam: "IDEA Toros Fútbol Academy MLS NEXT U15" },
+  { date: "15 Feb 26", category: "U15 Boys", homeTeam: "Global Football Innovation Academy MLS NEXT U15", score: "8-2", awayTeam: "ODP Selection MLS NEXT U15" },
 ];
 
 const matches: Match[] = rawMatches.map((match, index) => {

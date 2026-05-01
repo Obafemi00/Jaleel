@@ -95,7 +95,24 @@ export default function GalleryPage() {
         { id: "g38", src: "/images/IMG_5549.mov", alt: "", type: "video" },
         { id: "g39", src: "/images/Jaleel-arizona1.jpg", alt: "", type: "image" },
         { id: "g40", src: "/images/jaleel-arizona2.jpg", alt: "", type: "image" },
-        { id: "g41", src: "/images/jaleelarizona3.jpg", alt: "", type: "image" }
+        { id: "g41", src: "/images/jaleelarizona3.jpg", alt: "", type: "image" },
+        { id: "g42", src: "/images/gfi1.jpg", alt: "", type: "image" },
+        { id: "g43", src: "/images/gfi2.jpg", alt: "", type: "image" },
+        { id: "g44", src: "/images/gfi3.jpg", alt: "", type: "image" },
+        { id: "g45", src: "/images/gfi4.jpg", alt: "", type: "image" },
+        { id: "g46", src: "/images/gfi5.jpg", alt: "", type: "image" },
+        { id: "g47", src: "/images/gfi6.jpg", alt: "", type: "image" },
+        { id: "g48", src: "/images/gfi7.jpg", alt: "", type: "image" },
+        { id: "g49", src: "/images/gfi8.jpg", alt: "", type: "image" },
+        { id: "g50", src: "/images/gfi9.jpg", alt: "", type: "image" },
+        { id: "g51", src: "/images/gfi10.jpg", alt: "", type: "image" },
+        { id: "g52", src: "/images/gfi11.jpg", alt: "", type: "image" },
+        { id: "g53", src: "/images/gfi12.jpg", alt: "", type: "image" },
+        { id: "g54", src: "/images/gfi13.jpg", alt: "", type: "image" },
+        { id: "g55", src: "/images/gfi14.jpg", alt: "", type: "image" },
+        { id: "g56", src: "/images/gfi15.jpg", alt: "", type: "image" },
+        { id: "g57", src: "/images/gfi16.jpg", alt: "", type: "image" },
+        { id: "g58", src: "/images/gfi17.jpg", alt: "", type: "image" }
       ]
     },
     {

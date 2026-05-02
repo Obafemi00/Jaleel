@@ -22,6 +22,7 @@ interface GalleryTab {
 export default function GalleryPage() {
   const [activeTab, setActiveTab] = useState("juventus");
   const [activeOdpSubTab, setActiveOdpSubTab] = useState("2024-2025");
+  const [activeGfiSubTab, setActiveGfiSubTab] = useState("gfi-general");
 
   const galleryTabs: GalleryTab[] = [
     {
@@ -54,66 +55,7 @@ export default function GalleryPage() {
     {
       id: "gfi",
       label: "GFI",
-      images: [
-        { id: "g1", src: "/images/3.JPG", alt: "", type: "image" },
-        { id: "g2", src: "/images/4.jpg", alt: "", type: "image" },
-        { id: "g3", src: "/images/5.JPG", alt: "", type: "image" },
-        { id: "g4", src: "/images/7.JPG", alt: "", type: "image" },
-        { id: "g5", src: "/images/8.JPG", alt: "", type: "image" },
-        { id: "g6", src: "/images/9.JPG", alt: "", type: "image" },
-        { id: "g7", src: "/images/10.JPG", alt: "", type: "image" },
-        { id: "g8", src: "/images/11.JPG", alt: "", type: "image" },
-        { id: "g9", src: "/images/12.JPG", alt: "", type: "image" },
-        { id: "g10", src: "/images/13.JPG", alt: "", type: "image" },
-        { id: "g11", src: "/images/14.JPG", alt: "", type: "image" },
-        { id: "g12", src: "/images/15.JPG", alt: "", type: "image" },
-        { id: "g13", src: "/images/16.JPG", alt: "", type: "image" },
-        { id: "g14", src: "/images/17.JPG", alt: "", type: "image" },
-        { id: "g15", src: "/images/18.JPG", alt: "", type: "image" },
-        { id: "g16", src: "/images/19.JPG", alt: "", type: "image" },
-        { id: "g17", src: "/images/20.JPG", alt: "", type: "image" },
-        { id: "g18", src: "/images/21.JPG", alt: "", type: "image" },
-        { id: "g19", src: "/images/22.JPG", alt: "", type: "image" },
-        { id: "g20", src: "/images/23.JPG", alt: "", type: "image" },
-        { id: "g21", src: "/images/24.JPG", alt: "", type: "image" },
-        { id: "g22", src: "/images/A7404393.JPG", alt: "", type: "image" },
-        { id: "g23", src: "/images/A7404394.JPG", alt: "", type: "image" },
-        { id: "g24", src: "/images/A7404395.JPG", alt: "", type: "image" },
-        { id: "g25", src: "/images/A7404542.JPG", alt: "", type: "image" },
-        { id: "g26", src: "/images/A7404545.JPG", alt: "", type: "image" },
-        { id: "g27", src: "/images/A7404554.JPG", alt: "", type: "image" },
-        { id: "g28", src: "/images/A7404582.JPG", alt: "", type: "image" },
-        { id: "g29", src: "/images/A7404643.JPG", alt: "", type: "image" },
-        { id: "g30", src: "/images/A7404647.JPG", alt: "", type: "image" },
-        { id: "g31", src: "/images/A7404680.JPG", alt: "", type: "image" },
-        { id: "g32", src: "/images/A7404978.JPG", alt: "", type: "image" },
-        { id: "g33", src: "/images/A7407837.JPG", alt: "", type: "image" },
-        { id: "g34", src: "/images/A7408235.JPG", alt: "", type: "image" },
-        { id: "g35", src: "/images/A7408368.JPG", alt: "", type: "image" },
-        { id: "g36", src: "/images/A7408419.JPG", alt: "", type: "image" },
-        { id: "g37", src: "/images/IMG_3853.jpg", alt: "", type: "image" },
-        { id: "g38", src: "/images/IMG_5549.mov", alt: "", type: "video" },
-        { id: "g39", src: "/images/Jaleel-arizona1.jpg", alt: "", type: "image" },
-        { id: "g40", src: "/images/jaleel-arizona2.jpg", alt: "", type: "image" },
-        { id: "g41", src: "/images/jaleelarizona3.jpg", alt: "", type: "image" },
-        { id: "g42", src: "/images/gfi1.jpg", alt: "", type: "image" },
-        { id: "g43", src: "/images/gfi2.jpg", alt: "", type: "image" },
-        { id: "g44", src: "/images/gfi3.jpg", alt: "", type: "image" },
-        { id: "g45", src: "/images/gfi4.jpg", alt: "", type: "image" },
-        { id: "g46", src: "/images/gfi5.jpg", alt: "", type: "image" },
-        { id: "g47", src: "/images/gfi6.jpg", alt: "", type: "image" },
-        { id: "g48", src: "/images/gfi7.jpg", alt: "", type: "image" },
-        { id: "g49", src: "/images/gfi8.jpg", alt: "", type: "image" },
-        { id: "g50", src: "/images/gfi9.jpg", alt: "", type: "image" },
-        { id: "g51", src: "/images/gfi10.jpg", alt: "", type: "image" },
-        { id: "g52", src: "/images/gfi11.jpg", alt: "", type: "image" },
-        { id: "g53", src: "/images/gfi12.jpg", alt: "", type: "image" },
-        { id: "g54", src: "/images/gfi13.jpg", alt: "", type: "image" },
-        { id: "g55", src: "/images/gfi14.jpg", alt: "", type: "image" },
-        { id: "g56", src: "/images/gfi15.jpg", alt: "", type: "image" },
-        { id: "g57", src: "/images/gfi16.jpg", alt: "", type: "image" },
-        { id: "g58", src: "/images/gfi17.jpg", alt: "", type: "image" }
-      ]
+      images: []
     },
     {
       id: "other",
@@ -162,12 +104,86 @@ export default function GalleryPage() {
     }
   };
 
+  const gfiSubTabs: Record<string, { label: string; images: GalleryMedia[] }> = {
+    "gfi-general": {
+      label: "General",
+      images: [
+        { id: "g1",  src: "/images/3.JPG",              alt: "", type: "image" },
+        { id: "g2",  src: "/images/4.jpg",              alt: "", type: "image" },
+        { id: "g3",  src: "/images/5.JPG",              alt: "", type: "image" },
+        { id: "g4",  src: "/images/7.JPG",              alt: "", type: "image" },
+        { id: "g5",  src: "/images/8.JPG",              alt: "", type: "image" },
+        { id: "g6",  src: "/images/9.JPG",              alt: "", type: "image" },
+        { id: "g7",  src: "/images/10.JPG",             alt: "", type: "image" },
+        { id: "g8",  src: "/images/11.JPG",             alt: "", type: "image" },
+        { id: "g9",  src: "/images/12.JPG",             alt: "", type: "image" },
+        { id: "g10", src: "/images/13.JPG",             alt: "", type: "image" },
+        { id: "g11", src: "/images/14.JPG",             alt: "", type: "image" },
+        { id: "g12", src: "/images/15.JPG",             alt: "", type: "image" },
+        { id: "g13", src: "/images/16.JPG",             alt: "", type: "image" },
+        { id: "g14", src: "/images/17.JPG",             alt: "", type: "image" },
+        { id: "g15", src: "/images/18.JPG",             alt: "", type: "image" },
+        { id: "g16", src: "/images/19.JPG",             alt: "", type: "image" },
+        { id: "g17", src: "/images/20.JPG",             alt: "", type: "image" },
+        { id: "g18", src: "/images/21.JPG",             alt: "", type: "image" },
+        { id: "g19", src: "/images/22.JPG",             alt: "", type: "image" },
+        { id: "g20", src: "/images/23.JPG",             alt: "", type: "image" },
+        { id: "g21", src: "/images/24.JPG",             alt: "", type: "image" },
+        { id: "g22", src: "/images/A7404393.JPG",       alt: "", type: "image" },
+        { id: "g23", src: "/images/A7404394.JPG",       alt: "", type: "image" },
+        { id: "g24", src: "/images/A7404395.JPG",       alt: "", type: "image" },
+        { id: "g25", src: "/images/A7404542.JPG",       alt: "", type: "image" },
+        { id: "g26", src: "/images/A7404545.JPG",       alt: "", type: "image" },
+        { id: "g27", src: "/images/A7404554.JPG",       alt: "", type: "image" },
+        { id: "g28", src: "/images/A7404582.JPG",       alt: "", type: "image" },
+        { id: "g29", src: "/images/A7404643.JPG",       alt: "", type: "image" },
+        { id: "g30", src: "/images/A7404647.JPG",       alt: "", type: "image" },
+        { id: "g31", src: "/images/A7404680.JPG",       alt: "", type: "image" },
+        { id: "g32", src: "/images/A7404978.JPG",       alt: "", type: "image" },
+        { id: "g33", src: "/images/A7407837.JPG",       alt: "", type: "image" },
+        { id: "g34", src: "/images/A7408235.JPG",       alt: "", type: "image" },
+        { id: "g35", src: "/images/A7408368.JPG",       alt: "", type: "image" },
+        { id: "g36", src: "/images/A7408419.JPG",       alt: "", type: "image" },
+        { id: "g37", src: "/images/IMG_3853.jpg",       alt: "", type: "image" },
+        { id: "g38", src: "/images/IMG_5549.mov",       alt: "", type: "video" },
+        { id: "g39", src: "/images/Jaleel-arizona1.jpg", alt: "", type: "image" },
+        { id: "g40", src: "/images/jaleel-arizona2.jpg", alt: "", type: "image" },
+        { id: "g41", src: "/images/jaleelarizona3.jpg",  alt: "", type: "image" },
+      ] satisfies GalleryMedia[]
+    },
+    "mls-flex": {
+      label: "MLS FLEX 2026",
+      images: [
+        { id: "gfi1",  src: "/images/gfi1.jpg",  alt: "", type: "image" },
+        { id: "gfi2",  src: "/images/gfi2.jpg",  alt: "", type: "image" },
+        { id: "gfi3",  src: "/images/gfi3.jpg",  alt: "", type: "image" },
+        { id: "gfi4",  src: "/images/gfi4.jpg",  alt: "", type: "image" },
+        { id: "gfi5",  src: "/images/gfi5.jpg",  alt: "", type: "image" },
+        { id: "gfi6",  src: "/images/gfi6.jpg",  alt: "", type: "image" },
+        { id: "gfi7",  src: "/images/gfi7.jpg",  alt: "", type: "image" },
+        { id: "gfi8",  src: "/images/gfi8.jpg",  alt: "", type: "image" },
+        { id: "gfi9",  src: "/images/gfi9.jpg",  alt: "", type: "image" },
+        { id: "gfi10", src: "/images/gfi10.jpg", alt: "", type: "image" },
+        { id: "gfi11", src: "/images/gfi11.jpg", alt: "", type: "image" },
+        { id: "gfi12", src: "/images/gfi12.jpg", alt: "", type: "image" },
+        { id: "gfi13", src: "/images/gfi13.jpg", alt: "", type: "image" },
+        { id: "gfi14", src: "/images/gfi14.jpg", alt: "", type: "image" },
+        { id: "gfi15", src: "/images/gfi15.jpg", alt: "", type: "image" },
+        { id: "gfi16", src: "/images/gfi16.jpg", alt: "", type: "image" },
+        { id: "gfi17", src: "/images/gfi17.jpg", alt: "", type: "image" },
+      ] satisfies GalleryMedia[]
+    }
+  };
+
   const activeTabData = galleryTabs.find(tab => tab.id === activeTab) || galleryTabs[0];
-  
+
   // Get the active images based on tab and sub-tab
   const getActiveImages = (): GalleryMedia[] => {
     if (activeTab === "odp") {
       return odpSubTabs[activeOdpSubTab as keyof typeof odpSubTabs]?.images || [];
+    }
+    if (activeTab === "gfi") {
+      return gfiSubTabs[activeGfiSubTab as keyof typeof gfiSubTabs]?.images || [];
     }
     return activeTabData.images;
   };
@@ -258,6 +274,47 @@ export default function GalleryPage() {
                     {activeOdpSubTab === key && (
                       <motion.div
                         layoutId="activeOdpSubTab"
+                        className="absolute inset-0 bg-navy rounded-md shadow-md"
+                        initial={false}
+                        transition={{
+                          type: "spring",
+                          stiffness: 500,
+                          damping: 30
+                        }}
+                      />
+                    )}
+                    <span className="relative z-10">{subTab.label}</span>
+                  </button>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        )}
+
+        {/* GFI Sub-Tab Navigation */}
+        {activeTab === "gfi" && (
+          <motion.div
+            className="flex justify-center mb-8"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.4 }}
+          >
+            <div className="relative bg-gray-100 rounded-lg p-1 shadow-sm">
+              <div className="flex flex-wrap justify-center gap-1">
+                {Object.entries(gfiSubTabs).map(([key, subTab]) => (
+                  <button
+                    key={key}
+                    onClick={() => setActiveGfiSubTab(key)}
+                    className={`relative px-5 py-2 text-sm font-display font-medium rounded-md transition-all duration-300 ${
+                      activeGfiSubTab === key
+                        ? "text-white"
+                        : "text-gray-600 hover:text-navy"
+                    }`}
+                  >
+                    {activeGfiSubTab === key && (
+                      <motion.div
+                        layoutId="activeGfiSubTab"
                         className="absolute inset-0 bg-navy rounded-md shadow-md"
                         initial={false}
                         transition={{

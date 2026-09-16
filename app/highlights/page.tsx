@@ -49,6 +49,41 @@ export default function HighlightsPage() {
       videoId: "JhPnt_TW1aE",
       title: "Goal 3 — Jaleel Kotun (MLS NEXT)",
       year: "2025"
+    },
+    {
+      videoId: "BJ_Iglfcz88",
+      title: "Jaleel Kotun Highlights",
+      year: "2026"
+    },
+    {
+      videoId: "MUytp68Jy_w",
+      title: "Jaleel Kotun Highlights",
+      year: "2026"
+    },
+    {
+      videoId: "XQDUoLlknfk",
+      title: "Jaleel Kotun Highlights",
+      year: "2026"
+    },
+    {
+      videoId: "gx5RwsZ2bdY",
+      title: "Jaleel Kotun Highlights",
+      year: "2026"
+    },
+    {
+      videoId: "tPBjw6IL1vc",
+      title: "Jaleel Kotun Highlights",
+      year: "2026"
+    },
+    {
+      videoId: "Bg5plzdOA5o",
+      title: "Jaleel Kotun Highlights",
+      year: "2026"
+    },
+    {
+      videoId: "8o5X70GT5ac",
+      title: "Jaleel Kotun Highlights",
+      year: "2026"
     }
   ];
 

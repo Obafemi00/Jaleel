@@ -112,6 +112,7 @@ const rawMatches = [
   { date: "11 Apr 26", category: "U15 Boys", homeTeam: "IDEA Toros Futbol Academy MLS NEXT U15", score: "0-11", awayTeam: "Global Football Innovation Academy MLS NEXT U15" },
   { date: "11 Apr 26", category: "U15 Boys", homeTeam: "Capital City SC MLS NEXT U15 AD", score: "0-2", awayTeam: "Global Football Innovation Academy MLS NEXT U15 AD" },
   { date: "18 Apr 26", category: "U15 Boys", homeTeam: "Houston Rangers MLS NEXT U15", score: "3-0", awayTeam: "Global Football Innovation Academy MLS NEXT U15" },
+  { date: "12 Sep 26", category: "U16 Boys", homeTeam: "Global Football Innovation Academy MLS NEXT U16", score: "3-1", awayTeam: "Capital City SC MLS NEXT U16" },
 ];
 
 const matches: Match[] = rawMatches.map((match, index) => {
